@@ -3,6 +3,7 @@ import React, { useContext, useEffect } from "react";
 import { useState } from "react";
 import { UserContext } from "../comp/UserContext";
 import picture from "../IMG/logoface.png";
+import { serverUrl } from "../utils/env";
 
 export default function Post(joke) {
   const { userInfo, avatar } = useContext(UserContext);
@@ -26,7 +27,7 @@ export default function Post(joke) {
   async function handleDelete() {
     try {
       const response = await fetch(
-        `http://localhost:4000/jokes/${joke.joke._id}`,
+        `${serverUrl}/jokes/${joke.joke._id}`,
         {
           method: "DELETE",
           headers: { "Content-Type": "application/json" },

@@ -4,6 +4,7 @@ import { UserContext } from "../comp/UserContext";
 import { useContext } from "react";
 import { useState } from "react";
 import { Navigate } from "react-router-dom";
+import { serverUrl } from "../utils/env";
 
 
 export default function Profile() {
@@ -14,7 +15,7 @@ export default function Profile() {
   async function ShowUserJokes() {
     console.log(userInfo);
     try {
-      const response = await fetch(`http://localhost:4000/jokes/me`, {
+      const response = await fetch(`${serverUrl}/jokes/me`, {
         credentials: "include",
       });
       if (response.ok) {
@@ -34,7 +35,7 @@ export default function Profile() {
     const formData = new FormData();
     formData.append("image",imageFile );
     try {
-      const response = await fetch("http://localhost:4000/upload", {
+      const response = await fetch(`${serverUrl}/upload`, {
         method: "POST",
         body: formData,
         credentials: "include",

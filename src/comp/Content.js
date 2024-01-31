@@ -2,6 +2,8 @@ import { set } from "date-fns";
 import Post from "./Post";
 import { useEffect } from "react";
 import { useState } from "react";
+import {serverUrl} from "../utils/env"
+
 
 export default function Content() {
   const [jokes, setJokes] = useState([]);
@@ -9,6 +11,7 @@ export default function Content() {
   const [Img, setImg] = useState([]);
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
+
 
   useEffect(() => {
     let sortedJokes = [...filtredjokes];
@@ -57,7 +60,7 @@ export default function Content() {
 
   async function fetchJokes() {
     try {
-      const response = await fetch("http://localhost:4000/jokes", {
+      const response = await fetch(`${serverUrl}/jokes`, {
         credentials: "include",
       });
       if (response.ok) {

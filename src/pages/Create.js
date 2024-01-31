@@ -3,6 +3,7 @@ import { Navigate } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "../comp/UserContext";
 import { useParams } from "react-router-dom";
+import { serverUrl } from "../utils/env";
 
 export default function Create(_id) {
   const { id } = useParams();
@@ -15,7 +16,7 @@ export default function Create(_id) {
 
   useEffect(() => {
     if (id) {
-      fetch(`http://localhost:4000/jokes/${id}`, {
+      fetch(`${serverUrl}/jokes/${id}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -55,7 +56,7 @@ export default function Create(_id) {
   }
   async function updatejoke() {
     try {
-      const response = await fetch(`http://localhost:4000/jokes/${id}`, {
+      const response = await fetch(`${serverUrl}/jokes/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -87,7 +88,7 @@ export default function Create(_id) {
       data.append("username", userInfo.username);
       try {
         e.preventDefault();
-        const response = await fetch("http://localhost:4000/create", {
+        const response = await fetch(`${serverUrl}/create`, {
           method: "POST",
           body: data,
           credentials: "include",

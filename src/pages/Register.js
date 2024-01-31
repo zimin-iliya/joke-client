@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { serverUrl } from "../utils/env";
 
 export default function Register() {
   const [email, setEmail] = useState("");
@@ -9,7 +10,7 @@ export default function Register() {
     e.preventDefault();
     const regButton = document.querySelector(".register");
     try {
-      const response = await fetch("http://localhost:4000/register", {
+      const response = await fetch(`${serverUrl}/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password, email }),

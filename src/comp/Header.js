@@ -3,6 +3,7 @@ import { useContext, useEffect } from "react";
 import { UserContext } from "./UserContext";
 import { Navigate } from "react-router-dom";
 import { useState } from "react";
+import { serverUrl } from "../utils/env";
 
 export default function Header() {
   const { setUserInfo, userInfo,avatar, setAvatar } = useContext(UserContext);
@@ -11,7 +12,7 @@ export default function Header() {
 
   async function Logout() {
     try {
-      await fetch("http://localhost:4000/logout", {
+      await fetch(`${serverUrl}/logout`, {
         credentials: "include",
       });
       setUserInfo(false);
@@ -29,7 +30,7 @@ export default function Header() {
 
   async function fetchProfile() {
     try {
-      const response = await fetch("http://localhost:4000/profile", {
+      const response = await fetch(`${serverUrl}/profile`, {
         credentials: "include",
       });
       if (response.ok) {
@@ -48,7 +49,7 @@ export default function Header() {
 
   async function fetchImg() {
     try {
-      const response = await fetch("http://localhost:4000/avatars", {
+      const response = await fetch(`${serverUrl}/avatars`, {
         credentials: "include",
       });
       if (response.ok) {

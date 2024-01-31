@@ -1,0 +1,385 @@
+body {
+  color: #222;
+margin: 0;
+padding: 0;
+}
+img {
+  max-width: 100%;
+  min-width:  380px;
+}
+main {
+
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.logo-face{
+  display: flex;
+  min-width: 100px;
+  margin-left: 20px;
+  margin-right: 20px;
+  justify-content: space-between;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: scale-down;
+}
+header a {
+  text-decoration: none;
+  color: #000;
+}
+header a:hover {
+  color: #222;
+}
+header a.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.header-link {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+header nav {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+.header {
+  display: flex;
+  min-width: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #D93B81;
+  color: #fff;
+  flex-direction: row; /* Updated */
+}
+.header-right {
+  display: flex;
+  min-width: 0;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.social {
+  display: flex;
+  min-width: 380px;
+  justify-content: space-between;
+  margin: 20px;
+  gap: 10px;
+}
+.postheader {
+  display: flex;
+  min-width: 380px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-top: -300px;
+}
+.search-container {
+  display: flex;
+  min-width: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin:  20px;
+}
+
+.search-container button {
+  background-color: #d93b63c5;
+  color: #fff;
+}
+
+.postbody {
+  display: flex;
+  min-width: 380px;
+  flex-direction: column;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: stretch;
+  animation: fadeInUp 1s forwards;
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+div.post div.postimage {
+  display: flex;
+  min-width: 0;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.postauthor {
+  display: flex;
+  min-width: 0;
+  gap: 10px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+form.login {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+.fileupload {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #D93B81;
+  color: #fff;
+  border: 2px dashed #fff;
+  padding: 10px;
+}
+
+.fileupload:hover {
+  border-color: #222;
+}
+
+.fileupload input[type="file"] {
+  display: none;
+}
+
+.fileupload label {
+  cursor: pointer;
+}
+
+.fileupload label:hover {
+  text-decoration: underline;
+}
+
+
+.createjokebtn  {
+  display: flex;
+  min-width: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  gap: 10px;
+  margin-top: 20px;
+}
+.createjokebtn:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: #222;
+}
+.submitbtn{
+  display: flex;
+  min-width: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  gap: 10px;
+  margin-top: 20px;
+}
+.submitbtn:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: #222;
+}
+.createbox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 100%;
+}
+.joketext {
+  width: 400px;
+  height: 100px;
+  border-radius: 5px;
+
+  gap: 10px;
+  margin-top: 20px;
+}
+.header {
+  display:inline-block;
+  min-width: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+
+form.register {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #D93B81;
+  color: #fff;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+button:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: #222;
+}
+button.postbutton {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #D93B81;
+  color: #fff;
+  cursor: pointer;
+}
+button.postbuttondsbl {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #D93B81;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.card {
+  width: 500px;
+  height: auto;
+  margin-bottom: 20px;
+  background-color: rgb(240, 230, 230);
+  display: block;
+  min-width: 200px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.profile {
+  width: 500px;
+  height: auto;
+  margin-bottom: 20px;
+  background-color: rgb(185, 186, 195);
+  display: block;
+  min-width: 0;
+  justify-content: center;
+  min-width: 0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.card-header{
+  width: 500px;
+  height: 150px;  
+  margin: 0 auto;
+  display: flex;
+  line-break: anywhere;
+  justify-content: center;
+  align-items: center;
+  gap : 10px;
+}
+.joke-text {
+  display: flex;
+  min-width: 0;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin : 20px;
+  cursor: default;
+}
+
+
+.author-right {
+  display: flex;
+  min-width: 0;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
+  cursor: default;
+}
+.author-left {
+  display: flex;
+  min-width: 0;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-right: 20px;
+}
+
+.content {
+  display: flex;
+  min-width: 380px;
+  flex-direction: column;
+  height: 80%;
+  width: 80%;
+  color: #000000;
+  z-index: 1;
+}
+
+
+.card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: #222;
+  background-color: antiquewhite;
+}
+time {
+  font-size: 0.8em;
+  color: #999;
+  display: flex;
+  min-width: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-bottom {
+  display: flex;
+  min-width: 0;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.profile-top {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.profile-middle {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: start;
+  align-items:start;
+  gap: 10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+} 

@@ -29,7 +29,6 @@ export default function Profile() {
       console.error(error);
     }
   }
-  
 
   async function uploadImage(imageFile) {
     console.log("Uploading image:", imageFile);

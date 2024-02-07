@@ -15,7 +15,6 @@ export default function Post(joke) {
       const index = avatar.findIndex((item) =>
         item.data.publicUrl.endsWith(targetValue)
       );
-      console.log(index);
       setImgIndex(index);
     }
   }, [avatar]);

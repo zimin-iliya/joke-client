@@ -1,7 +1,7 @@
 import React from "react";
 import Post from "../comp/Post";
 import { UserContext } from "../comp/UserContext";
-import { useContext } from "react";
+import { useContext,useEffect } from "react";
 import { useState } from "react";
 import { Navigate } from "react-router-dom";
 import { serverUrl } from "../utils/env";
@@ -11,6 +11,18 @@ export default function Profile() {
   const [userJokes, setuserJokes] = useState([]);
   const [redirect, setRedirect] = useState(false);
   const { userInfo,avatar } = useContext(UserContext);
+
+  useEffect(() => {
+    if (avatar.length > 0) {
+      console.log(userInfo);
+      // const targetValue = (userInfo.username)?.toLowerCase() + ".jpg";
+      // const index = avatar.findIndex((item) =>
+      //   item.data.publicUrl.endsWith(targetValue)
+      // );
+      // console.log(index);
+      // setImgIndex(index);
+    }
+  }, [avatar]);
 
   async function ShowUserJokes() {
     console.log(userInfo);

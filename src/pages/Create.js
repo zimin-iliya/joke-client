@@ -130,7 +130,7 @@ export default function Create(_id) {
               type="button"
               onClick={generateJoke}
             >
-              Genarate me a joke
+              Generate me a joke
             </button>
             <button className="submitbtn" type="submit">
               Submit

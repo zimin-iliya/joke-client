@@ -10,21 +10,21 @@ export default function HeaderLogo() {
             window.open("https://www.instagram.com/zimin.street/", "_blank");
           }}
         >
-          instagram
+          Instagram
         </button>
         <button
           onClick={() => {
             window.open("https://www.facebook.com/zimin.box", "_blank");
           }}
         >
-          facebook
+          Facebook
         </button>
         <button
           onClick={() => {
             window.open("https://www.youtube.com/@zimin8", "_blank");
           }}
         >
-          youtube
+          Youtube
         </button>
         <button
           onClick={() => {

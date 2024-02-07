@@ -8,7 +8,7 @@ export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [redirect, setRedirect] = useState(false);
-  const { setUserInfo,UserInfo } = useContext(UserContext);
+  const { setUserInfo, UserInfo } = useContext(UserContext);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -24,6 +24,7 @@ export default function Login() {
           console.log("data", data);
           setUserInfo(data);
           setRedirect(true);
+          localStorage.setItem("userInfo", JSON.stringify(data)); // Store user info in local storage
         });
       } else {
         console.log("error");

@@ -2,8 +2,7 @@ import { set } from "date-fns";
 import Post from "./Post";
 import { useEffect } from "react";
 import { useState } from "react";
-import {serverUrl} from "../utils/env"
-
+import { serverUrl } from "../utils/env";
 
 export default function Content() {
   const [jokes, setJokes] = useState([]);
@@ -11,7 +10,6 @@ export default function Content() {
   const [Img, setImg] = useState([]);
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
-
 
   useEffect(() => {
     let sortedJokes = [...filtredjokes];

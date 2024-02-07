@@ -21,10 +21,8 @@ export default function Login() {
       });
       if (response.ok) {
         response.json().then((data) => {
-          console.log("data", data);
           setUserInfo(data);
           setRedirect(true);
-          // localStorage.setItem("userInfo", JSON.stringify(data)); // Store user info in local storage
         });
       } else {
         console.log("error");

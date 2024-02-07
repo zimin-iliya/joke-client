@@ -24,7 +24,7 @@ export default function Login() {
           console.log("data", data);
           setUserInfo(data);
           setRedirect(true);
-          localStorage.setItem("userInfo", JSON.stringify(data)); // Store user info in local storage
+          // localStorage.setItem("userInfo", JSON.stringify(data)); // Store user info in local storage
         });
       } else {
         console.log("error");

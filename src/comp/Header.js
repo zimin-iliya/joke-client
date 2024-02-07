@@ -6,18 +6,16 @@ import { useState } from "react";
 import { serverUrl } from "../utils/env";
 
 export default function Header() {
-  const { setUserInfo, userInfo,avatar, setAvatar } = useContext(UserContext);
+  const { setUserInfo, userInfo, avatar, setAvatar } = useContext(UserContext);
   const [redirect, setRedirect] = useState(false);
-
 
   async function Logout() {
     try {
       await fetch(`${serverUrl}/logout`, {
         credentials: "include",
       });
-      setUserInfo(false);
+      setUserInfo(null);
       setRedirect(true);
-      window.location.reload();
     } catch (error) {
       console.error(error);
     }
@@ -43,8 +41,11 @@ export default function Header() {
       console.error(error);
     }
   }
+
   if (redirect) {
-    return <Navigate to="/" />;
+    setTimeout(() => {
+      return <Navigate to="/" />;
+    }, 1000);
   }
 
   async function fetchImg() {
@@ -62,7 +63,6 @@ export default function Header() {
       console.error(error);
     }
   }
-
 
   return (
     <>

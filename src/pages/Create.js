@@ -12,7 +12,6 @@ export default function Create(_id) {
   const [content, setContent] = useState("");
   const [redirect, setRedirect] = useState(false);
 
-  console.log("this is userInfo", userInfo);
 
   useEffect(() => {
     if (id) {
@@ -26,6 +25,7 @@ export default function Create(_id) {
         .then((res) => res.json())
         .then((data) => {
           setContent(data.content);
+          console.log(data.content);
         })
         .catch((error) => {
           console.error("Error in useEffect:", error);
@@ -45,7 +45,6 @@ export default function Create(_id) {
           const data = await response.text();
           setJoke(data);
 
-          console.log(data);
         } else {
           console.log("error");
         }
